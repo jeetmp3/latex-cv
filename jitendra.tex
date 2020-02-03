@@ -1,176 +1,140 @@
-\documentclass[]{resume}
-\usepackage{fancyhdr}
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
 
-\pagestyle{fancy}
-\fancyhf{}
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{colorcv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+% If using xelatex or lualatex:
+\setmainfont{Carlito}
+\else
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\fi
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+}
+\urlstyle{same}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{00004d}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+%\addbibresource{sample.bib}
 
 \begin{document}
+    \name{Jitendra Singh}
+    \tagline{Software Engineer}
+    % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+    \photo{2.5cm}{jittu}
+    \personalinfo{%
+    % Not all of these are required!
+    % You can add your own with \printinfo{symbol}{detail}
+    \email{jeet.mp3@gmail.com}
+    \phone{+91-9990446178}
+    \location{Pune, IN}
+    }
 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %
-    %     LAST UPDATED DATE
-    %
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \lastupdated
+    %% Make the header extend all the way to the right, if you want.
+    \begin{fullwidth}
+        \makecvheader
+    \end{fullwidth}
 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %
-    %     TITLE NAME
-    %
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \namesection{Jitendra}{Singh}{\urlstyle{same}\href{mailto:jeet.mp3@gmail.com}{jeet.mp3@gmail.com} | +91-9990446178}
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    \AtBeginEnvironment{itemize}{\small}
 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %
-    %     COLUMN ONE
-    %
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cvsection[sidebar]{Experience}
 
-    \begin{minipage}[t]{0.33\textwidth}
+    \cvevent{Application Lead Developer}{BNY Mellon}{Jul 2018 -- Ongoing}{Pune, IN}
+    \begin{itemize}
+        \item Migrate the legacy Eagle Investment system to the Cloud Native platform and make it cloud first and SAAS based product. As a part of this project, the whole ecosystem of Eagle Investment System needs to be re-written.
+        \item Working with remote team \& Ensuring Quality deliverables for the Client.
+        \item Working on RBAC Authorization framework.
+        \item Worked on several Azure Cloud products e.g: Azure AD, ServiceBus, Blob storage, etc.
+    \end{itemize}
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %     SKILLS
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \divider
 
-        \section{Skills}\label{sec:skills}
-        \subsubsection{Core}
-        \textbullet{} Algorithms and Data structures\\
-        \subsubsection{Programming}
-        \textbullet{} Java \textbullet{} Groovy\\
-        \subsubsection{Frameworks}
-        \textbullet{} Spring Framework \textbullet{} Spring Boot\\
-        \textbullet{} Hibernate\\
-        \subsubsection{Security}
-        \textbullet{} Spring Security \textbullet{} OpenID Connect\\
-        \textbullet{} OAuth2\\
-        \subsubsection{Database}
-        \textbullet{} MySQL \textbullet{} MongoDB\\
-        \subsubsection{Cloud}
-        \textbullet{} Azure \textbullet{} AWS\\
-        \subsubsection{Build Tools}
-        \textbullet{} Gradle \textbullet{} Maven\\
-        \subsubsection{Testing Frameworks}
-        \textbullet{} Junit \textbullet{} Mockito \textbullet{} Spock\\
-        \subsubsection{Editors}
-        \textbullet{} Idea IntelliJ \textbullet{} VIM \textbullet{} Eclipse\\
-        \subsubsection{Operating System}
-        \textbullet{} UN*X \textbullet{} Linux \textbullet{} Windows\\
-        \subsubsection{BigData}
-        \textbullet{} HDFS \textbullet{} Hive \textbullet{} Spark\\
-        \subsubsection{Others}
-        \textbullet{} Consul \textbullet{} GraphQL\\
-        \sectionsep
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %     LINKS
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cvevent{Lead Engineer}{Bharti Airtel}{Nov 2017 - Jun 2018}{Gurugram, IN}
+    \begin{itemize}
+        \item Led the team of 6 developers.
+        \item Designed \& Lead Postpaid SIM Acquisition product from scratch.
+        \item Maintaining a productive working environment for development teams.
+    \end{itemize}
 
-        \section{Links}\label{sec:links}
-        Blog: \href{https://dev.to/jeetmp3}{\textbf{https://dev.to/jeetmp3}}\\
-        Github: \href{https://github.com/jeetmp3}{\textbf{@jeetmp3}}\\
-        LinkedIn: \href{https://www.linkedin.com/in/jitendra-bisht-a7a25845/}{\textbf{@jitendra-bisht-a7a25845}}\\
-        Twitter: \href{https://twitter.com/JitendraBisht27}{\textbf{@JitendraBisht27}}\\
-        \href{https://drive.google.com/file/d/1A-Ol0hMl7bzwiPwvkwAmhSSblKBC4NUc/view?usp=sharing}{more..}
-        \sectionsep
+    \divider
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %
-        %     COLUMN TWO
-        %
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cvevent{Associate Technical Lead}{TO THE NEW}{May 2014 - Nov 2017}{Noida, IN}
+    \begin{itemize}
+        \item Worked on HDFC mutual funds management project.
+        \item Worked on several social analytics dashboards.
+        \item Full-stack development.
+        \item Ensuring Quality deliverables for the Client.
+    \end{itemize}
 
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.66\textwidth}
+    \divider
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %     EXPERIENCE
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cvevent{Software Engineer}{Spice Digital Ltd.}{Aug 2012 - May 2014}{Noida, IN}
+    \begin{itemize}
+        \item Developed Bharat BPO website.
+        \item Worked as Full-stack developer.
+        \item Worked on multiple WAP portals.
+        \item Exposed rest APIs for mobile app.
+    \end{itemize}
 
-        \section{Experience}\label{sec:experience}
-        \runsubsection{BNY Mellon}
-        \descript{| Application Lead Developer}
-        \location{Jul 2018 - Present | Pune, IN}
-        \vspace{\topsep}
-        \begin{tightemize}
-            \item Backend developer
-            \item Working with remote team and ensuring quality deliverables for the client.
-            \item Worked on RBAC AuthZ framework to grant Role Based access.
-        \end{tightemize}
-        \sectionsep
+    \divider
 
-        \runsubsection{Bharti Airtel}
-        \descript{| Lead Engineer }
-        \location{November 2017 – June 2018 | Gurugram, IN}
-        %\vspace{\topsep}
-        \begin{tightemize}
-            \item Worked as Lead engineer on SIM Acquizition product.
-        \end{tightemize}
-        \sectionsep
+    \cvsection{Open Source Contribution}
+    \begin{itemize}
+        \item \href{https://plugins.grails.org/plugin/jeetmp3/spring-session}{\textbf{Owner of} Spring-session grails plugin}.
+        \item \textbf{Contribution to Spring Community}
+        \begin{enumerate}
+            \item \small Jackson mixin classes added in \textbf{spring-security} core, cas and web modules.
+            \item Added a project sample in \textbf{spring-session} to demonstrate JSON based session
+            serialization in redis.
+        \end{enumerate}
+    \end{itemize}
 
-        \runsubsection{TO THE NEW}
-        \descript{| Associate Tech Lead - Technology }
-        \location{May 2014 – November 2017 | Noida, IN}
-        \begin{tightemize}
-            \item Worked as fullstack developer.
-            \item Managed team of 6 developer.
-            \item Ensuring quality deliverables for the client.
-        \end{tightemize}
-        \sectionsep
-
-        \runsubsection{Spice Digital Ltd.}
-        \descript{| Software Engineer}
-        \location{August 2012 – May 2014 | Noida, IN}
-        \begin{tightemize}
-            \item Worked on multiple internal products.
-            \item Worked as fullstack developer.
-        \end{tightemize}
-        \sectionsep
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %     Open Source
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        \section{Open source}\label{sec:open-source}
-        \vspace{\topsep}
-        \begin{tightemize}
-            \item \href{https://plugins.grails.org/plugin/jeetmp3/spring-session}{\textbf{Owner of} Spring-session grails plugin}.
-            \item \textbf{Contribution to Spring Community}
-                \begin{enumerate}
-                    \item \small Jackson mixin classes added in \textbf{spring-security} core, cas and web modules.
-                    \item Added a project sample in \textbf{spring-session} to demonstrate JSON based session
-                    serialization in redis.
-                \end{enumerate}
-        \end{tightemize}
-        \sectionsep
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %     CERTIFICATIONS
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \section{Certifications}\label{sec:certifications}
-        \vspace{\topsep}
-        \begin{tightemize}
-            \item \href{https://drive.google.com/file/d/0B3T07LM4mDj8SnFiOGl4LTZsaVk/view}{\textbf{MongoDB Certification for Java developer}}\\
-            bit.ly/mongocertificate
-            {\vspace{\topsep}}
-            \item \href{https://www.edureka.co/my-certificate/eadaa90dfc3b7655d95d57f5413043f6}{\textbf{Big Data certification}}\\
-            bit.ly/bigdata\_certificate
-        \end{tightemize}
-        \sectionsep
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %     Education
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        \section{Education}\label{sec:education}
-        \subsection{Uttarakhand Technical University}\label{subsec:uttarakhand-technical-university}
-        \descript{Masters in Computers Application}
-        \location{May 2009 | Dehradun, IN | 2012}
-
-        \subsection{Kumaun University Nainital}\label{subsec:kumaun-university-nainital}
-        \descript{Bachelores in Computers Application}
-        \location{May 2006 | Nainital, IN | 2009}
-
-        \sectionsep
-
-    \end{minipage}
-\end{document}  \documentclass[]{article}
+\end{document}
