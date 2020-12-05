@@ -128,6 +128,7 @@
 \newcommand{\homepagesymbol}{\faChain}
 \newcommand{\locationsymbol}{\faMapMarker}
 \newcommand{\linkedinsymbol}{\faLinkedin}
+\newcommand{\rsssymbol}{\faRss}
 \newcommand{\twittersymbol}{\faTwitter}
 \newcommand{\githubsymbol}{\faGithub}
 \newcommand{\orcidsymbol}{\aiOrcid}
@@ -144,6 +145,7 @@
 \newcommand{\homepage}[1]{\printinfo{\homepagesymbol}{#1}}
 \newcommand{\twitter}[1]{\printinfo{\twittersymbol}{#1}}
 \newcommand{\linkedin}[1]{\printinfo{\linkedinsymbol}{#1}}
+\newcommand{\rss}[1]{\printinfo{\rsssymbol}{#1}}
 \newcommand{\github}[1]{\printinfo{\githubsymbol}{#1}}
 \newcommand{\orcid}[1]{\printinfo{\orcidsymbol}{#1}}
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
